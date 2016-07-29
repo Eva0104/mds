@@ -15,6 +15,15 @@ public class User {
     private Timestamp creatime;
     private String realname;
     private  String rolename;
+    private String telphone;
+
+    public String getTelphone() {
+        return telphone;
+    }
+
+    public void setTelphone(String telphone) {
+        this.telphone = telphone;
+    }
 
     public String getRolename() {
         return rolename;
