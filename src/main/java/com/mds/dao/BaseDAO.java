@@ -46,6 +46,7 @@ public class BaseDAO<T, PK extends Serializable> {
         getSession().delete(findById(id));
     }
 
+
     public List<T> findAll() {
         Criteria criteria = getSession().createCriteria(entityClass);
         return criteria.list();
@@ -145,5 +146,7 @@ public class BaseDAO<T, PK extends Serializable> {
         }
         return null;
     }
+
+
 
 }
