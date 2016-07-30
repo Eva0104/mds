@@ -38,8 +38,8 @@ public class DiseaseService {
         diseaseDAO.delete(id);
     }
 
-    public Page<Disease> findBookByParam(Integer pageNo, HttpServletRequest request) {
-        List<SearchParam> searchParamList = SearchParam.getSearchParam(request);
+    public Page<Disease> findBookByParam(Integer pageNo, List<SearchParam> searchParamList) {
+
         return diseaseDAO.findByParams(pageNo,10,searchParamList);
     }
 }

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://cdn.staticfile.org/font-awesome/4.1.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://cdn.staticfile.org/select2/3.4.8/select2.css">
-    <link rel="stylesheet" href="http://cdn.staticfile.org/select2/3.4.8/select2-bootstrap.css">
+    <link rel="stylesheet" href="/static/plugins/select2/select2-bootstrap.css">
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
@@ -75,6 +75,7 @@
 <script src="http://cdn.staticfile.org/twitter-bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="http://cdn.staticfile.org/select2/3.4.8/select2.min.js"></script>
 <script src="/static/plugins/validate/jquery.validate.js"></script>
+
 <script>
     $(function(){
         $("#ks").select2({

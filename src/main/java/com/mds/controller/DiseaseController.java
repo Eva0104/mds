@@ -5,6 +5,7 @@ import com.mds.pojo.Disease;
 import com.mds.service.DeptService;
 import com.mds.service.DiseaseService;
 import com.mds.util.Page;
+import com.mds.util.SearchParam;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -32,8 +33,9 @@ public class DiseaseController {
     public String DiseaseList(Model model,
                               @RequestParam(name = "p",required = false,defaultValue = "1")Integer pageNo,
                               HttpServletRequest request){
+        List<SearchParam> searchParamList = SearchParam.getSearchParam(request);
 
-        Page<Disease> page = diseaseService.findBookByParam(pageNo,request);
+        Page<Disease> page = diseaseService.findBookByParam(pageNo,searchParamList);
 
         List<Dept> deptList = deptService.findAllDept();
 

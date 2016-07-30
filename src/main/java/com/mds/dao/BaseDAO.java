@@ -142,7 +142,7 @@ public class BaseDAO<T, PK extends Serializable> {
         } else if ("lt".equalsIgnoreCase(type)) {
             return Restrictions.lt(propertyName, value);
         } else if ("like".equalsIgnoreCase(type)) {
-            return Restrictions.like(propertyName, Strings.toUTF8(value.toString()), MatchMode.ANYWHERE);
+            return Restrictions.like(propertyName, value.toString(), MatchMode.ANYWHERE);
         }
         return null;
     }
