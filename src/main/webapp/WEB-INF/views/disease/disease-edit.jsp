@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +10,6 @@
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-
 <jsp:include page="../head.jsp"/>
 <div class="container-fluid">
     <div class="row-fluid">
@@ -19,15 +19,19 @@
                 <div class="box-header">
             <span class="title">
               <i class="fa fa-plus"></i>
-              <a href="dept-list.html"> 科室列表</a>  /  新增科室
+              <a href="dept-list.html"> 病种列表</a>  /  修改病种
             </span>
                 </div>
                 <div class="box-body form">
                     <form action="" method="post">
-                        <label>科室名称</label>
-                        <input type="text" name="deptname" value="${dept.deptname}">
-                        <label>负责人</label>
-                        <input type="text" name="deptperson" value="${dept.deptperson}">
+                        <label>病种名称</label>
+                        <input type="text" name="diseasename" value="${disease.diseasename}">
+                        <label>所属科室</label>
+                        <select name="dept.id">
+                            <c:forEach items="${deptList}" var="dept">
+                                <option value="${dept.id}" ${dept.id == disease.dept.id ? 'selected':''}>${dept.deptname}</option>
+                            </c:forEach>
+                        </select>
                         <div class="form-actions">
                             <button class="button button-flat-action button-pill">保存</button>
                         </div>
