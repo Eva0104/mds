@@ -32,7 +32,7 @@ public class DiseaseService {
 
         Dept dept = deptDAO.findById(deptid);
         String deptname = dept.getDeptname();
-        
+
         disease.setDeptname(deptname);
         diseaseDAO.save(disease);
     }
