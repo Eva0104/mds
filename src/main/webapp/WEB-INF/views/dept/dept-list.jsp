@@ -11,6 +11,7 @@
 </head>
 <body>
 
+<<<<<<< HEAD
 <div class="navbar navbar-static-top">
     <div class="navbar-inner">
         <a class="brand" href="#">MDS</a>
@@ -38,10 +39,12 @@
         </ul>
     </div>
 </div>
+=======
+<jsp:include page="../head.jsp"/>
+>>>>>>> 4bbca624d6543b41901b15f0ad4730bdbd076999
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span12">
-
             <div class="box">
                 <div class="box-header">
                     <span class="title"><i class="fa fa-sitemap"></i> 科室列表</span>
@@ -65,7 +68,7 @@
                                 <th>${dept.deptperson}</th>
                                 <th>
                                     <a href="/dept/${dept.id}/edit">修改</a>
-                                    <a href="/dept/${dept.id}/del">删除</a>
+                                    <a href="javaScript:;" class="delBtn" data="${dept.id}">删除</a>
                                 </th>
                             </tr>
                         </c:forEach>
@@ -84,6 +87,29 @@
 
 <script src="http://cdn.staticfile.org/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/twitter-bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+<script>
+    $(function(){
+
+        $(document).delegate(".delBtn","click",function(){
+            var id = $(this).attr("data");
+            if(confirm("确认删除吗？")){
+                $.get("/dept/"+id+"/del/").done(function(data){
+                    if(data == "success"){
+                        window.location.reload();
+                    }
+                }).fail(function(){
+                    alert("服务器异常!")
+                })
+            }
+        });
+
+
+
+
+    })
+
+</script>
 
 </body>
 </html>

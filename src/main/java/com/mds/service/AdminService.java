@@ -68,6 +68,23 @@ public class AdminService {
         adminDAO.save(user);
     }
 
+    public User findById(Integer id) {
+        return adminDAO.findById(id);
+    }
+
+    /**
+     * 删除用户
+     * @param user
+     */
+    public void del(User user) {
+        adminDAO.delBook(user);
+
+    }
+
+    public void save2(User user) {
+        adminDAO.save(user);
+    }
+
     /**
      * 保存日志
      *
