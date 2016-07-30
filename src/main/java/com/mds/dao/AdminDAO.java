@@ -27,4 +27,16 @@ public class AdminDAO extends BaseDAO<User, Integer> {
 
         return user;
     }
+    public void saveUser(User user) {
+
+
+        String sql = "insert INTO t_user ( username, password,  realname, rolename, telphone) VALUES (:username, :password,  :realname, :rolename, :telphone)";
+        SQLQuery query = getSession().createSQLQuery(sql).addEntity(User.class);
+        query.setParameter("username",user.getUsername());
+        query.setParameter("password",user.getPassword());
+        query.setParameter("realname",user.getRealname());
+        query.setParameter("rolename",user.getRolename());
+        query.setParameter("telphone",user.getTelphone());
+        getSession().save(query);
+    }
 }

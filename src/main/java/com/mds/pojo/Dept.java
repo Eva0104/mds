@@ -1,9 +1,20 @@
 package com.mds.pojo;
 
 import javax.persistence.*;
+<<<<<<< HEAD
 @Entity
 @Table(name="t_dept")
 public class Dept {
+=======
+
+
+@Entity
+@Table(name="t_dept")
+public class Dept {
+
+
+
+>>>>>>> e82fecafa9397a2f10b4e6ee4b8b5772ef5d552c
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

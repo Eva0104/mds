@@ -5,6 +5,10 @@ import javax.persistence.*;
 @Entity
 @Table(name="t_disease")
 public class Disease {
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82fecafa9397a2f10b4e6ee4b8b5772ef5d552c
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
