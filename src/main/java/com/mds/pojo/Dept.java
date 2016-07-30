@@ -15,6 +15,7 @@ public class Dept {
     private String deptname;
     private String deptperson;
 
+
     public Integer getId() {
         return id;
     }
