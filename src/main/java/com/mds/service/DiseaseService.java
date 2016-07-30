@@ -1,6 +1,8 @@
 package com.mds.service;
 
+import com.mds.dao.DeptDAO;
 import com.mds.dao.DiseaseDAO;
+import com.mds.pojo.Dept;
 import com.mds.pojo.Disease;
 import com.mds.util.Page;
 import com.mds.util.SearchParam;
@@ -18,11 +20,20 @@ public class DiseaseService {
     @Inject
     private DiseaseDAO diseaseDAO;
 
+    @Inject
+    private DeptDAO deptDAO;
+
     public List<Disease> findAllDisease() {
         return diseaseDAO.findAll();
     }
 
     public void saveDis(Disease disease) {
+        Integer deptid = disease.getDept().getId();
+
+        Dept dept = deptDAO.findById(deptid);
+        String deptname = dept.getDeptname();
+        
+        disease.setDeptname(deptname);
         diseaseDAO.save(disease);
     }
 
@@ -39,7 +50,6 @@ public class DiseaseService {
     }
 
     public Page<Disease> findBookByParam(Integer pageNo, List<SearchParam> searchParamList) {
-
         return diseaseDAO.findByParams(pageNo,10,searchParamList);
     }
 }
