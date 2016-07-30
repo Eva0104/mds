@@ -6,9 +6,6 @@ import javax.persistence.*;
 @Table(name="t_dept")
 public class Dept {
 
-
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

@@ -12,7 +12,9 @@
 <body>
 
 
+
 <jsp:include page="head.jsp"/>
+
 
 <div class="container-fluid">
     <div class="row-fluid">
@@ -20,8 +22,6 @@
         <div class="span9">xxxxx</div>
     </div>
 </div>
-
-
 <script src="/static/js/jquery-1.11.3.min.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
 

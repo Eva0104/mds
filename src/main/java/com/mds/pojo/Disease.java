@@ -1,7 +1,6 @@
 package com.mds.pojo;
 
 import javax.persistence.*;
-
 @Entity
 @Table(name="t_disease")
 public class Disease {

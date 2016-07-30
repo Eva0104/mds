@@ -1,6 +1,7 @@
 package com.mds.pojo;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "t_healthct")
@@ -9,6 +10,16 @@ public class Surance {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String hctname;
+    @OneToMany(mappedBy = "surance")
+    private Set<Patients> patientsSet;
+
+    public Set<Patients> getPatientsSet() {
+        return patientsSet;
+    }
+
+    public void setPatientsSet(Set<Patients> patientsSet) {
+        this.patientsSet = patientsSet;
+    }
 
     public Integer getId() {
         return id;

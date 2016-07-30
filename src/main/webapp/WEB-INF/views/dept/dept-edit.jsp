@@ -10,6 +10,7 @@
 </head>
 <body>
 
+<<<<<<< HEAD
 <div class="navbar navbar-static-top">
     <div class="navbar-inner">
         <a class="brand" href="#">凯盛医疗</a>
@@ -37,6 +38,9 @@
         </ul>
     </div>
 </div>
+=======
+<jsp:include page="../head.jsp"/>
+>>>>>>> c2ac072d381f94e0814d86052024ca190556346a
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span12">
