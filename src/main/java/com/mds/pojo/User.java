@@ -16,6 +16,24 @@ public class User {
     private String realname;
     private  String rolename;
     private String telphone;
+    private Timestamp logintime;
+    private String loginip;
+
+    public Timestamp getLogintime() {
+        return logintime;
+    }
+
+    public void setLogintime(Timestamp logintime) {
+        this.logintime = logintime;
+    }
+
+    public String getLoginip() {
+        return loginip;
+    }
+
+    public void setLoginip(String loginip) {
+        this.loginip = loginip;
+    }
 
     public String getTelphone() {
         return telphone;

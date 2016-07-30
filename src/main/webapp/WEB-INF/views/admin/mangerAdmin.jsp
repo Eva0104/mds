@@ -23,7 +23,7 @@
             <li class="dropdown active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" ><i class="fa fa-cogs"></i> 系统设置 <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href=""><i class="fa fa-sitemap"></i> 科室设置</a></li>
+                    <li><a href="/dept/set"><i class="fa fa-sitemap"></i> 科室设置</a></li>
                     <li><a href=""><i class="fa fa-medkit"></i> 病种设置</a></li>
                     <li><a href=""><i class="fa fa-bars"></i> 医保类型设置</a></li>
                     <li><a href=""><i class="fa fa-child"></i> 患者状态设置</a></li>
@@ -46,7 +46,7 @@
                 <div class="box-header">
             <span class="title">
               <i class="fa fa-plus"></i>
-              <a href="dept-list.html"> 系统账户列表</a>  /  新增账号
+              <a href="/admin/list"> 系统账户列表</a>  /  新增账号
             </span>
                 </div>
                 <div class="box-body form">

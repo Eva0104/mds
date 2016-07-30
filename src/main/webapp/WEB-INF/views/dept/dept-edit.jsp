@@ -27,7 +27,7 @@
                     <li><a href=""><i class="fa fa-bars"></i> 医保类型设置</a></li>
                     <li><a href=""><i class="fa fa-child"></i> 患者状态设置</a></li>
                     <li class="divider"></li>
-                    <li><a href=""><i class="fa fa-user-md"></i> 账号设置</a></li>
+                    <li><a href="/admin/add"><i class="fa fa-user-md"></i> 账号设置</a></li>
                 </ul>
             </li>
         </ul>

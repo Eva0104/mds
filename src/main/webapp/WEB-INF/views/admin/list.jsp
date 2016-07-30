@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,28 +45,38 @@
 
             <div class="box">
                 <div class="box-header">
-                    <span class="title"><i class="fa fa-sitemap"></i> 科室列表</span>
-                    <ul class="unstyled inline pull-right">
-                        <li><a href="/dept/new"><i class="fa fa-plus"></i> 新建</a></li>
-                    </ul>
+                    <span class="title"><i class="fa fa-sitemap"></i> 账号信息列表</span>
+                    <%--<ul class="unstyled inline pull-right">--%>
+                        <%--<li><a href="/dept/new"><i class="fa fa-plus"></i> 新建</a></li>--%>
+                    <%--</ul>--%>
                 </div>
                 <div class="box-body">
                     <table class="table">
                         <thead>
                         <tr>
-                            <th width="200">科室名称</th>
-                            <th width="200">负责人</th>
+                            <th width="200">账户名</th>
+                            <th width="200">员工姓名</th>
+                            <th width="200">电话</th>
+                            <th width="200">最后登录时间</th>
+                            <th width="200">最后登录IP</th>
                             <th>#</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <c:forEach items="${deptList}" var="dept">
+                        <c:forEach items="${userList}" var="log">
                             <tr>
-                                <th>${dept.deptname}</th>
-                                <th>${dept.deptperson}</th>
+                                <th>${log.username}</th>
+                                <th>${log.realname}</th>
+
+                                <th>${log.telphone}</th>
+                                <%--<th><fmt:formatDate value="${log.logintime}" pattern="y-M-d H:m"/></th>--%>
+                                <th><fmt:formatDate value="${log.logintime}" pattern="yyyy-MM-dd HH:mm"/></th>
+                                <%--<th>${log.logintime}</th>--%>
+                                <th>${log.loginip}</th>
                                 <th>
-                                    <a href="/dept/${dept.id}/edit">修改</a>
-                                    <a href="/dept/${dept.id}/del">删除</a>
+                                    <a href="/admin/${dept.id}/edit">修改</a>
+                                    <a href="/admin/${dept.id}/disable">禁用</a>
+                                    <a href="/admin/${dept.id}/del">删除</a>
                                 </th>
                             </tr>
                         </c:forEach>

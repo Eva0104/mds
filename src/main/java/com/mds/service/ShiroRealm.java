@@ -34,8 +34,8 @@ public class ShiroRealm extends AuthorizingRealm {
 
             SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
             info.addRole(role);
-            System.out.println("~~~~info~~~`"+info);
-            System.out.println("~~~~role.getRolename()~~~`"+role);
+//            System.out.println("~~~~info~~~`"+info);
+//            System.out.println("~~~~role.getRolename()~~~`"+role);
             return info;
         }
 
