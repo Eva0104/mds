@@ -30,4 +30,8 @@ public class DeptService {
     public void updateDept(Dept dept) {
         deptDAO.save(dept);
     }
+
+    public void delDept(Integer id) {
+        deptDAO.delete(id);
+    }
 }
