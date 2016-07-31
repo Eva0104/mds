@@ -25,16 +25,16 @@
                 <div class="box-body search-box">
                     <form method="get" class="form-inline">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="姓名" name="p_s_like_name_or_pinyin"
-                                   value="${p_s_like_name_or_pinyin}">
+                            <input type="text" class="form-control" placeholder="姓名" name="q_s_like_name_or_pinyin"
+                                   value="${q_s_like_name_or_pinyin}">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="身份证号" name="p_s_like_card"
-                                   value="${p_s_like_card}">
+                            <input type="text" class="form-control" placeholder="身份证号" name="q_s_like_card"
+                                   value="${q_s_like_card}">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="电话" name="p_s_like_telphone"
-                                   value="${p_s_like_telphone}">
+                            <input type="text" class="form-control" placeholder="电话" name="q_s_like_telphone"
+                                   value="${q_s_like_telphone}">
                         </div>
                         <button class="button button-flat-primary button-pill"><i class="fa fa-search"></i> 搜索
                         </button>
@@ -187,7 +187,7 @@
                 prev: '上一页',
                 next: '下一页',
                 last: '末页',
-                href: '?p={{number}}&p_s_like_name_or_pinyin=${p_s_like_name_or_pinyin}&p_s_like_card=${p_s_like_card}&p_s_like_telphone=${p_s_like_telphone}'
+                href: '?p={{number}}&q_s_like_name_or_pinyin=${q_s_like_name_or_pinyin}&q_s_like_card=${q_s_like_card}&q_s_like_telphone=${q_s_like_telphone}'
             });
 
 

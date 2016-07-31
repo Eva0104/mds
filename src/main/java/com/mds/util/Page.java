@@ -35,7 +35,7 @@ public class Page<T> {
      * @param pageSize 每页显示的数据量
      * @param totalSize 总记录数
      */
-    public Page(Integer pageNo, Integer pageSize, Integer totalSize) {
+    public Page(Integer totalSize,Integer pageNo,Integer pageSize  ) {
         this.pageNo = pageNo;
         this.pageSize = pageSize;
         this.totalSize = totalSize;
