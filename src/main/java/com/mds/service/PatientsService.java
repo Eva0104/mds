@@ -27,7 +27,10 @@ public class PatientsService {
      * @param patients
      */
     public void save(Patients patients) {
-        patients.setCreatime(new Timestamp(System.currentTimeMillis()));
+        if(patients.getCreatime()==null){
+
+            patients.setCreatime(new Timestamp(System.currentTimeMillis()));
+        }
         patients.setPinyin(Strings.pinyin4j(patients.getName()));
         patientsDAO.save(patients);
 
@@ -45,5 +48,18 @@ public class PatientsService {
 
     public Page<Patients> findByPageNo2(Integer pageNo, List<SearchParam> searchParams) {
         return patientsDAO.findByParams(pageNo,5,searchParams);
+    }
+
+    /**
+     * 查询病人具体信息
+     * @param id
+     * @return
+     */
+    public Patients findById(Integer id) {
+        return patientsDAO.findById(id);
+    }
+
+    public void del(Integer id) {
+         patientsDAO.delete(id);
     }
 }

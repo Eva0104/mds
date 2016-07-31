@@ -20,6 +20,33 @@ public class Patients {
     private String pinyin;
     private String card;
     private Timestamp creatime;
+    private String allergy;
+    private String note;
+    private Integer age;
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public String getAllergy() {
+        return allergy;
+    }
+
+    public void setAllergy(String allergy) {
+        this.allergy = allergy;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
 
     public String getPinyin() {
         return pinyin;

@@ -100,7 +100,7 @@
 
     <script src="http://cdn.staticfile.org/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://cdn.staticfile.org/twitter-bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script src="/static/plugins/validate/jquery.validate.min.js"></script>
+    <script src="/static/plugins/validate/jquery.validate.js"></script>
     <script>
         $(function () {
             $("#editForm").validate({

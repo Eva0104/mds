@@ -12,7 +12,9 @@
 </head>
 <body>
 
-<jsp:include page="../head.jsp"/>
+<jsp:include page="../head.jsp">
+    <jsp:param name="menu" value="patient"/>
+</jsp:include>
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span12">
@@ -75,7 +77,7 @@
                                     <td>
                                         <input type="checkbox" >
                                     </td>
-                                    <td><a href="patient.html">${patients.name}</a></td>
+                                    <td ><a href="/patient/${patients.id}/view">${patients.name}</a></td>
                                     <td>${patients.sex}</td>
                                     <td>${patients.telphone}</td>
                                     <td>${patients.surance.hctname}</td>
@@ -133,6 +135,11 @@
 
                                 </div>
                                 <div class="form-group">
+                                    <label>年龄</label>
+                                    <input type="text" name="age" class="form-control">
+
+                                </div>
+                                <div class="form-group">
                                     <label>医保类型</label>
                                     <select name="surance.id" class="form-control">
                                         <%--<option value=""></option>--%>
@@ -150,6 +157,17 @@
                                         <option value="出院">出院</option>
                                     </select>
                                 </div>
+                                    <div>
+                                        <label>过敏史</label>
+                                        <textarea name="allergy"  rows="10" class="form-control"></textarea>
+                                        <%--<input type="text" name="allergy" class="span12">--%>
+                                    </div>
+                                    <div>
+                                        <label>备注</label>
+                                        <textarea name="note"  rows="10" class="form-control"></textarea>
+                                        <%--<input type="text" name="note" class="span12">--%>
+                                    </div>
+
 
                                 <%--<div class="form-group" id="userList">--%>
                                 <%--<label>所属公司</label>--%>
@@ -223,6 +241,16 @@
                     },
                     address: {
                         required: true
+                    },
+                    age: {
+                        required: true,
+                        number: true
+                    },
+                    allergy:{
+                        required: true
+                    },
+                    note:{
+                        required: true
                     }
 
                 },
@@ -243,6 +271,16 @@
                     },
                     address: {
                         required: "请输入地址"
+                    },
+                    age: {
+                        required: "请输入年龄",
+                        number: "请输入有效数字"
+                    },
+                    allergy:{
+                        required: "请输入过敏史如果没有请填  无"
+                    },
+                    note:{
+                        required: "请输入备注如果没有请填  无"
                     }
                 },
                 submitHandler: function (form) {

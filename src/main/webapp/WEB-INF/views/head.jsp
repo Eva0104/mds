@@ -5,11 +5,11 @@
         <a class="brand" href="#">MDS</a>
         <ul class="nav">
             <li><a href="/home"><i class="fa fa-home"></i> 首页</a></li>
-            <li><a href="/patient/list"><i class="fa fa-building"></i> 病人档案</a></li>
+            <li class="${param.menu == 'patient' ? 'active' : ''}"><a href="/patient/list"><i class="fa fa-building"></i> 病人档案</a></li>
             <li><a href="/visit/list"><i class="fa fa-stethoscope"></i>  就诊记录</a></li>
             <li><a href="#"><i class="fa fa-bell-o"></i> 复诊提醒</a></li>
             <li><a href="#"><i class="fa fa-bar-chart-o"></i> 数据统计</a></li>
-            <li class="dropdown active">
+            <li class="dropdown active" >
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" ><i class="fa fa-cogs"></i> 系统设置 <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="/dept/set"><i class="fa fa-sitemap"></i> 科室设置</a></li>

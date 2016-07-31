@@ -11,7 +11,9 @@
 </head>
 <body>
 
-<jsp:include page="../head.jsp"/>
+<jsp:include page="../head.jsp">
+    <jsp:param name="admin" value="patient"/>
+</jsp:include>
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span12">

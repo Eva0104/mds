@@ -12,7 +12,9 @@
 </head>
 <body>
 
-<jsp:include page="../head.jsp"/>
+<jsp:include page="../head.jsp">
+    <jsp:param name="admin" value="patient"/>
+</jsp:include>
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span12">
@@ -137,9 +139,9 @@
 
 <script src="/static/js/jquery-1.11.3.min.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
-<script src="/static/plugins/validate/jquery.validate.min.js"></script>
 <script src="/static/plugins/validate/jquery.validate.js"></script>
-<script src="/static/plugins/jquery.validate.js"></script>
+
+
 
 
 <script>

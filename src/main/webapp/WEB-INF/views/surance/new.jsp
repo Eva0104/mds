@@ -59,7 +59,7 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button type="button" id="editGo" class="btn btn-default" data-dismiss="modal">取消</button>
                                     <button type="button" class="btn btn-primary" id="editBtn">保存</button>
                                 </div>
                             </div>
@@ -77,7 +77,7 @@
 
     <script src="http://cdn.staticfile.org/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://cdn.staticfile.org/twitter-bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script src="/static/plugins/validate/jquery.validate.min.js"></script>
+    <script src="/static/plugins/validate/jquery.validate.js"></script>
     <script>
         $(function () {
 
@@ -129,6 +129,10 @@
                     $("#editForm").submit();
 
                 })
+            $("#editGo").click(function () {
+                window.location.href = "/admin/list"
+
+            })
 
 
 
