@@ -38,7 +38,7 @@ public class SearchParam {
         this.value = value;
     }
 
-    public static List<SearchParam> getSearchParam(HttpServletRequest request){
+    public static List<SearchParam> builderSerchParam(HttpServletRequest request){
 
         List<SearchParam> searchParams = new ArrayList<>();
 

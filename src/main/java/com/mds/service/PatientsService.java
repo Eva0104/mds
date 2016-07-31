@@ -2,6 +2,7 @@ package com.mds.service;
 
 import com.mds.dao.PatientsDAO;
 import com.mds.pojo.Patients;
+import com.mds.util.Page;
 import com.mds.util.SearchParam;
 import com.mds.util.Strings;
 import org.springframework.transaction.annotation.Transactional;
@@ -40,5 +41,9 @@ public class PatientsService {
 
     public List<Patients> findByname(String l) {
         return patientsDAO.findByname(l);
+    }
+
+    public Page<Patients> findByPageNo2(Integer pageNo, List<SearchParam> searchParams) {
+        return patientsDAO.findByParams(pageNo,5,searchParams);
     }
 }

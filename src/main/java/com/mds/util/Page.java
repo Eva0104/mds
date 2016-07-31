@@ -4,75 +4,83 @@ import java.util.List;
 
 public class Page<T> {
     /**
-     * 总数据
+     * 总记录数
      */
     private Integer totalSize;
     /**
      * 总页数
      */
-    private Integer totalPageSize;
+    private Integer totalPages;
     /**
      * 当前页码
      */
-    private Integer pageNum;
+    private Integer pageNo;
     /**
      * 每页显示多少条数据
      */
-    private Integer size;
-    /**
-     * 当前页的起始行数
-     */
-    private Integer start;
+    private Integer pageSize;
     /**
      * 当前页的数据
      */
     private List<T> items;
 
-    public Page(Integer totalSize, Integer pageNum, Integer size) {
+    /**
+     * 获取当前页起始行数
+     */
+    private Integer start;
+
+    /**
+     *
+     * @param pageNo 当前页码
+     * @param pageSize 每页显示的数据量
+     * @param totalSize 总记录数
+     */
+    public Page(Integer pageNo, Integer pageSize, Integer totalSize) {
+        this.pageNo = pageNo;
+        this.pageSize = pageSize;
         this.totalSize = totalSize;
-        this.pageNum = pageNum;
-        this.size = size;
 
-        totalPageSize = totalSize / size;
-
-
-        if (totalSize % size != 0) {
-            totalPageSize++;
+        //计算总页数
+        totalPages = totalSize / pageSize;
+        if(totalSize % pageSize != 0) {
+            totalPages++;
         }
 
-        if (pageNum > totalPageSize) {
-            this.pageNum = totalPageSize;
+        if(pageNo > totalPages) {
+            this.pageNo = totalPages;
+        }
+        if(this.pageNo <= 0) {
+            this.pageNo = 1;
         }
 
-        if(this.pageNum <=0 ){
-            this.pageNum = 1;
-        }
-
-        start = (this.pageNum - 1) * size;
-
+        start = (this.pageNo - 1) * pageSize;
     }
 
-    public void setItems(List<T> items) {
-        this.items = items;
+    public Integer getTotalSize() {
+        return totalSize;
+    }
+
+    public Integer getTotalPages() {
+        return totalPages;
+    }
+
+    public Integer getPageNo() {
+        return pageNo;
+    }
+
+    public Integer getPageSize() {
+        return pageSize;
     }
 
     public List<T> getItems() {
         return items;
     }
 
-    public Integer getTotalPageSize() {
-        return totalPageSize;
-    }
-
-    public Integer getPageNum() {
-        return pageNum;
-    }
-
     public Integer getStart() {
         return start;
     }
 
-    public Integer getTotalSize() {
-        return totalSize;
+    public void setItems(List<T> items) {
+        this.items = items;
     }
 }

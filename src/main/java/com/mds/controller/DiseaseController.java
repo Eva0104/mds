@@ -33,7 +33,7 @@ public class DiseaseController {
     public String DiseaseList(Model model,
                               @RequestParam(name = "p",required = false,defaultValue = "1")Integer pageNo,
                               HttpServletRequest request){
-        List<SearchParam> searchParamList = SearchParam.getSearchParam(request);
+        List<SearchParam> searchParamList = SearchParam.builderSerchParam(request);
 
         Page<Disease> page = diseaseService.findBookByParam(pageNo,searchParamList);
 

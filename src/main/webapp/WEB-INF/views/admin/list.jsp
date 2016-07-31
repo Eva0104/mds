@@ -69,6 +69,7 @@
                         </c:forEach>
                         </tbody>
                     </table>
+                    <ul class="pagination pull-right" id="page"></ul>
                 </div>
             </div>
 
@@ -138,6 +139,9 @@
 <script src="/static/js/bootstrap.min.js"></script>
 <script src="/static/plugins/validate/jquery.validate.min.js"></script>
 <script src="/static/plugins/validate/jquery.validate.js"></script>
+<script src="/static/plugins/jquery.validate.js"></script>
+
+
 <script>
 
 
