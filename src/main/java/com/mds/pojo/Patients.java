@@ -17,7 +17,25 @@ public class Patients {
     private String telphone;
     private String address;
     private String state;
+    private String pinyin;
+    private String card;
     private Timestamp creatime;
+
+    public String getPinyin() {
+        return pinyin;
+    }
+
+    public void setPinyin(String pinyin) {
+        this.pinyin = pinyin;
+    }
+
+    public String getCard() {
+        return card;
+    }
+
+    public void setCard(String card) {
+        this.card = card;
+    }
 
     public Integer getId() {
         return id;

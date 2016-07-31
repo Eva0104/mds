@@ -14,17 +14,17 @@
         <property name="unauthorizedUrl" value="/403"/>
         <property name="securityManager" ref="securityManager"/>
         <!--配置URL级别的权限要求-->
-        <property name="filterChainDefinitions">
-            <value>
-                /static/** = anon
-                /admin/** = roles[管理员]
-                /user/**= roles[管理员]
-                <!--/notice/new=roles[经理]-->
-                <!--/customer/del/**=roles[经理]-->
-                <!--/sales/del/**=roles[经理]-->
-                /** = authc
-            </value>
-        </property>
+        <!--<property name="filterChainDefinitions">-->
+            <!--<value>-->
+                <!--/static/** = anon-->
+                <!--/admin/** = roles[管理员]-->
+                <!--/user/**= roles[管理员]-->
+                <!--&lt;!&ndash;/notice/new=roles[经理]&ndash;&gt;-->
+                <!--&lt;!&ndash;/customer/del/**=roles[经理]&ndash;&gt;-->
+                <!--&lt;!&ndash;/sales/del/**=roles[经理]&ndash;&gt;-->
+                <!--/** = authc-->
+            <!--</value>-->
+        <!--</property>-->
     </bean>
 
     <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
